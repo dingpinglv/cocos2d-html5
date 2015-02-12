@@ -135,10 +135,11 @@
 
         var gl = cc._renderContext, locScaleFactor = cc.contentScaleFactor();
         this._fullRect = new cc.Rect(0,0, width, height);
-        this._fullViewport = new cc.Rect(0,0, width, height);
+        this._rtTextureRect = new cc.Rect(0,0, width, height);
 
         width = 0 | (width * locScaleFactor);
         height = 0 | (height * locScaleFactor);
+        this._fullViewport = new cc.Rect(0,0, width, height);
 
         this._oldFBO = gl.getParameter(gl.FRAMEBUFFER_BINDING);
 
